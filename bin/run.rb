@@ -5,6 +5,7 @@ shia = SHIA.uniq
 tweet_words = shia.map do |tweet|
   tweet.split(' ')
 end
+binding.pry
 
 redacted = tweet_words.map do |word_array|
   word_array.delete_if {|word| word.match(/\W|\d|^RT$/)}
@@ -31,7 +32,6 @@ end
 
 
 
-binding.pry
 
 vocabulary = words.flatten
 
