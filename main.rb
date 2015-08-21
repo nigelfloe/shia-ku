@@ -5,6 +5,6 @@ end
 post '/' do
   # twitter = TwitterApi.new
   # user = params[:user]
-  @haiku =
+  # @haiku = 
   slim :index
 end
