@@ -1,7 +1,5 @@
-# require_relative '../config/environment'
-# require_relative 'arrays/shia_array'
 require_relative 'lines'
-# require 'lines'
+
 
 class Haiku
   include Lines
@@ -39,10 +37,12 @@ class Haiku
       i += 1
     end
     third_line = words.slice(i..-1).join(' ')
-    "#{first_line}\n#{second_line}\n#{third_line}"
+    """#{first_line}
+    #{second_line}
+    #{third_line}"""
   end
 
-  def print
+  def print_poem
     puts create_poem
   end
 end
