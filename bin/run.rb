@@ -1,4 +1,4 @@
 require_relative '../config/environment'
-
-
-Haiku.new.print
+#
+haiku = Haiku.new
+haiku.poem
