@@ -40,9 +40,9 @@ class Haiku
     end
     third_line = words.slice(i..-1).join(' ')
     # binding.pry
-    @first_line = first_line
-    @second_line = second_line
-    @third_line = third_line
+    @first_line = first_line.strip
+    @second_line = second_line.strip
+    @third_line = third_line.strip
   end
 
   def poem
