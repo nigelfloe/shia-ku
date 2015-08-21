@@ -2,6 +2,7 @@ require_relative 'lines'
 
 
 class Haiku
+  attr_reader :first_line, :second_line, :third_line
   include Lines
 
   def diction
@@ -9,15 +10,16 @@ class Haiku
     first_key = syllable_hash.keys.sample
     poem_array << syllable_hash[first_key].sample
     second_key = 17 - first_key
-    if second_key != 15
+    if second_key > 0 && second_key != 15
       poem_array << syllable_hash[second_key].sample
-    else
+    elsif second_key > 0
       poem_array << syllable_hash[14].sample
       poem_array << syllable_hash[1].sample
     end
     words = poem_array.map do |tweet|
       tweet.split(' ')
     end
+    # binding.pry
     words.flatten!
   end
 
@@ -37,12 +39,16 @@ class Haiku
       i += 1
     end
     third_line = words.slice(i..-1).join(' ')
-    """#{first_line}
-    #{second_line}
-    #{third_line}"""
+    # binding.pry
+    @first_line = first_line
+    @second_line = second_line
+    @third_line = third_line
   end
 
-  def print_poem
-    puts create_poem
+  def poem
+    create_poem
+    puts @first_line
+    puts @second_line
+    puts @third_line
   end
 end

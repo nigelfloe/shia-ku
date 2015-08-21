@@ -1,0 +1,52 @@
+body {
+  background-color: #7995ba;
+}
+h1 {
+  text-align: center;
+  font-family: 'Fredoka One';
+  color: white;
+}
+
+div.h1-div{
+  padding: 20px;
+}
+
+div.textarea-div {
+  text-align: center;
+  padding: 30px;
+  width: 500px;
+  margin: auto;
+}
+div.button-div{
+  padding: 20px;
+  text-align: center;
+  width: 150px;
+  margin: auto;
+}
+
+textarea {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 200px;
+  background-color: #c5dcee;
+  border-width: 4px;
+  border-radius: 3px;
+  border-spacing: 4px;
+  border-color: #507490;
+  resize: none;
+}
+
+button {
+  background-color:#878787;
+  display: block;
+  font-family: 'Fredoka One';
+  font-size: 20px;
+  color: white;
+  height: 150px;
+  width: 150px;
+  border-width: 4px;
+  border-color: #507490;
+  border-style: solid;
+  border-radius: 150px;
+}
